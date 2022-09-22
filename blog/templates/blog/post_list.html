@@ -5,7 +5,9 @@
     <body>
         <div>
             
-            <h1><a href="/">BLOG DE TORTUGAS</a></h1>
+            <h1><a href="#">BLOG DE TORTUGAS</a></h1>
+
+            <p>¿QUÉ SON LAS TORTUGAS?</p>
         </div>
 
 
@@ -32,6 +34,17 @@
                 ayudan a determinar las diferentes especies.</p>
 
         </div>
+
+        {% for post in posts %} 
+
+        <dir>
+            <p> Articulo Publicado: {{ post.published_date }}</p>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </dir>    
+    {% endfor %}
+
+
 
     </body>
 </html>    
